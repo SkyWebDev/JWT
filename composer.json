@@ -1,0 +1,22 @@
+{
+    "name": "sky-web-dev/jwt",
+    "description": "A library for JWT manipulation",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SkyWebDev\\Jwt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikola Milenkovic",
+            "email": "dzoni82.kg@gmail.com",
+            "homepage": "https://github.com/nikolakg82"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-openssl": "*"
+    }
+}
