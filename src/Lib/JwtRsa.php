@@ -21,6 +21,10 @@ class JwtRsa extends Jwt
             throw new \Exception($this->secretKey . ' does not exists');
         }
         $privateKey = file_get_contents($this->secretKey);
+        if (!openssl_pkey_get_private($privateKey)) {
+            throw new \Exception('Pem private key is not valid');
+        }
+
         openssl_sign(
             $this->header . "." . $this->payload,
             $signature,
